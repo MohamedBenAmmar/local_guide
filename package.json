@@ -9,7 +9,6 @@
   },
   "author": "Beth Johnson",
   "license": "ISC",
-
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -39,5 +38,5 @@
     "react-dom": "^16.13.1",
     "react-scroll": "^1.8.0",
     "style-loader": "^1.2.1"
- }
+  }
 }
