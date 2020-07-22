@@ -1,18 +1,31 @@
-import React from "react";
+import React, { Component} from "react";
 import ReactDOM from "react-dom";
 import GuidePage from "./components/guidePage.jsx"
 
+import Signup from './components/homepage/signup.jsx';
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
+import NavBar from './components/navbar.jsx';
+import Login from './components/homepage/login.jsx'
+
 class App extends React.Component {
+
   constructor(props) {
     super(props);
-    this.state = {};
+   
   }
   render() {
-    return (
-      <div>
+    return (<div>
+      <NavBar fixed="top" />
+     <Signup />
+     <Login />
         <GuidePage />
-      </div>
-    )
+    </div>)
   }
+
+
+ 
+
+
 }
 ReactDOM.render(<App />, document.getElementById("app"));

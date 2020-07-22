@@ -1,15 +1,10 @@
+
 module.exports = {
   entry: __dirname + '/client/src/index.jsx',
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      },
-      {
+
         test: [/\.jsx$/],
         exclude: /node_modules/,
         use: {
@@ -18,7 +13,24 @@ module.exports = {
             presets: ['@babel/preset-react', '@babel/preset-env']
           }
         }
-      }
+      },
+      {
+        test: /\.css$/,
+         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+    },
+    {
+      test: /\.(png|jpe?g|gif)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+        },
+      ],
+    },
+
     ]
   },
    output: {
