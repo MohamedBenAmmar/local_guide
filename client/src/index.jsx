@@ -1,5 +1,6 @@
 import React, { Component} from "react";
 import ReactDOM from "react-dom";
+import GuidePage from "./components/guidePage.jsx"
 
 import Signup from './components/homepage/signup.jsx';
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
@@ -18,11 +19,13 @@ class App extends React.Component {
       <NavBar fixed="top" />
      <Signup />
      <Login />
+        <GuidePage />
     </div>)
   }
 
 
  
+
 
 }
 ReactDOM.render(<App />, document.getElementById("app"));
