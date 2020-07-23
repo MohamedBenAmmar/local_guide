@@ -11,12 +11,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/../client/dist"));
 
+
 app.use("/api", userRoutes);
 
 app.post("/", (req, res) => {
   ctrl.add(req, res);
 });
 
+
 app.listen(3000, function () {
   console.log("listening on port 3000!");
-});
+}); 

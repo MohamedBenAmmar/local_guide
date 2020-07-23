@@ -1,4 +1,5 @@
 
+
 module.exports = {
   entry: __dirname + '/client/src/index.jsx',
   module: {
@@ -38,3 +39,4 @@ module.exports = {
     path: __dirname + '/client/dist'
   }
 };
+
