@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import axios from 'axios';
+import axios from "axios";
 
 //import { MDBCol, MDBSelectInput, MDBSelect} from "mdbreact";
 import FindProfile from "./localguide.jsx";
@@ -127,7 +127,7 @@ class Search extends React.Component {
             "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
         },
       ],
-      newData= [
+      newData: [
         {
           Name: "AymanYaich",
           age: 35,
@@ -250,17 +250,21 @@ class Search extends React.Component {
       selectLang: "selectLang",
       selectGender: "selectGender",
     };
-    this.filterBy = this.filterBy.bind(this)
+    
   }
   typingMethod() {
     this.setState({
       typingButton: !this.state.typingButton,
     });
-   axios.post('/search',{_idOne = this.state.selectCity,
-    _idTwo = this.state.selectLang,
-    _idThree = this.state.selectGender}).then((result)=>{
-      this.setState({newData : result})
-    })
+    axios
+      .post("/search", {
+        _idOne: this.state.selectCity,
+        _idTwo: this.state.selectLang,
+        _idThree: this.state.selectGender,
+      })
+      .then((result) => {
+        this.setState({ newData: result });
+      });
   }
   handleChangeCity(e) {
     this.setState({
@@ -279,7 +283,6 @@ class Search extends React.Component {
   }
 
   // filterBy() {
-  
 
   //   var _idOne = this.state.selectCity;
   //   var _idTwo = this.state.selectLang;
