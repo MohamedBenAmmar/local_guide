@@ -24,5 +24,13 @@
     "mongoose": "^4.8.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AymanYaich/local_guide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AymanYaich/local_guide/issues"
+  },
+  "homepage": "https://github.com/AymanYaich/local_guide#readme"
 }
