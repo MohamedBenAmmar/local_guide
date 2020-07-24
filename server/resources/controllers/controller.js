@@ -50,12 +50,12 @@ exports.login = (req, res, next) => {
 };
 
 const Guide = require("../models/model");
-var selectAll = function (callback) {
+var selectAll = function (req, res) {
   Guide.find({}, function (err, items) {
     if (err) {
-      callback(err, null);
+      console.log("error getting all the data from the DB");
     } else {
-      callback(null, items);
+      res.send(items);
     }
   });
 };
@@ -80,16 +80,12 @@ var add = function (req, res) {
 var select = function (req, res) {
   Guide.find(
     {
-      city: req.body.city,
-      gender: req.body.gender,
-      languages: req.body.languages,
+      city: req.query.city,
+      gender: req.query.gender,
+      languages: { $in: [req.query.languages] },
     },
-    function (err, items) {
-      if (err) {
-        callback(err, null);
-      } else {
-        res.send(items);
-      }
+    (err, docs) => {
+      res.send(docs);
     }
   );
 };
@@ -120,3 +116,4 @@ module.exports.deleteOne = deleteOne;
 module.exports.deleteAll = deleteAll;
 module.exports.add = add;
 module.exports.selectAll = selectAll;
+module.exports.select = select;

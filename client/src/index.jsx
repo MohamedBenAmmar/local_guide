@@ -1,7 +1,8 @@
+
 import React, { Component} from "react";
 import ReactDOM from "react-dom";
 import GuidePage from "./components/guidePage.jsx"
-
+import Search from "./components/searchbar.jsx"
 import Signup from './components/homepage/signup.jsx';
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
@@ -19,7 +20,8 @@ class App extends React.Component {
       <NavBar fixed="top" />
      <Signup />
      <Login />
-        <GuidePage />
+        <GuidePage /> 
+        <Search/>
     </div>)
   }
 
@@ -27,5 +29,7 @@ class App extends React.Component {
  
 
 
+
 }
-ReactDOM.render(<App />, document.getElementById("app"));
+
+ReactDOM.render(<App/>,document.getElementById('app'))

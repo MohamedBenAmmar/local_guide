@@ -16,6 +16,12 @@ app.use("/api", userRoutes);
 app.post("/", (req, res) => {
   ctrl.add(req, res);
 });
+app.get("/1", (req, res) => {
+  ctrl.selectAll(req, res);
+});
+app.get("/search", (req, res) => {
+  ctrl.select(req, res);
+});
 
 app.listen(3000, function () {
   console.log("listening on port 3000!");
