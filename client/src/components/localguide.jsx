@@ -3,7 +3,6 @@ import React from "react";
 class FindProfile extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
   }
   render() {
     return (

@@ -9,260 +9,29 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataBase: [
-        {
-          Name: "AymanYaich",
-          age: 35,
-          gender: "Male",
-          languages: ["English", "Arabic", "French"],
-          city: "Sousse",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Monastir",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "MounaBrahmi",
-          age: 29,
-          gender: "Female",
-          languages: ["English", "Arabic", "French"],
-          city: "Kairwan",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Sfax",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Tunis",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Tozeur",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Gafasa",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Tataouin",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "MounaBrahmi",
-          age: 29,
-          gender: "Female",
-          languages: ["English", "Arabic", "French"],
-          city: "Gafsa",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-        {
-          Name: "MounaBrahmi",
-          age: 29,
-          gender: "Female",
-          languages: ["English", "Arabic", "French"],
-          city: "Nabeul",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-        {
-          Name: "MounaBrahmi",
-          age: 29,
-          gender: "Female",
-          languages: ["English", "Arabic", "French"],
-          city: "Nabeul",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-        {
-          Name: "MounaBrahmi",
-          age: 29,
-          gender: "Female",
-          languages: ["English", "Arabic", "French"],
-          city: "Tabarka",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-      ],
-      newData: [
-        {
-          Name: "AymanYaich",
-          age: 35,
-          gender: "Male",
-          languages: ["English", "Arabic", "French"],
-          city: "Sousse",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Monastir",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "MounaBrahmi",
-          age: 29,
-          gender: "Female",
-          languages: ["English", "Arabic", "French"],
-          city: "Kairwan",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Sfax",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Tunis",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Tozeur",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Gafasa",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          city: "Tataouin",
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "AmiraAyoubi",
-          age: 25,
-          gender: "Female",
-          languages: ["English", "Arabic", "Russian"],
-          imgURL:
-            "https://premiumaddons.b-cdn.net/wp-content/uploads/2018/01/beautiful-woman-smiles.jpg",
-        },
-        {
-          Name: "MounaBrahmi",
-          age: 29,
-          gender: "Female",
-          languages: ["English", "Arabic", "French"],
-          city: "Gafsa",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-        {
-          Name: "MounaBrahmi",
-          age: 29,
-          gender: "Female",
-          languages: ["English", "Arabic", "French"],
-          city: "Nabeul",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-        {
-          Name: "MounaBrahmi",
-          age: 29,
-          gender: "Female",
-          languages: ["English", "Arabic", "French"],
-          city: "Nabeul",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-        {
-          Name: "MounaBrahmi",
-          age: 29,
-          gender: "Female",
-          languages: ["English", "Arabic", "French"],
-          city: "Tabarka",
-          imgURL:
-            "https://www.yourdictionary.com/images/definitions/lg/10750.person.jpg",
-        },
-      ],
+      newData: [],
       typingButton: false,
-      selectCity: "selectCity",
-      selectLang: "selectLang",
-      selectGender: "selectGender",
+      selectCity: "",
+      selectLang: "",
+      selectGender: "",
     };
+  }
+  componentDidMount() {
+    axios.get("/1").then((data) => {
+      this.setState({ newData: data.data });
+    });
   }
   typingMethod() {
     this.setState({
       typingButton: !this.state.typingButton,
     });
+
     axios
-      .post("/search", {
-        _idOne: this.state.selectCity,
-        _idTwo: this.state.selectLang,
-        _idThree: this.state.selectGender,
-      })
+      .get(
+        `/search?city=${this.state.selectCity}&languages=${this.state.selectLang}&gender=${this.state.selectGender}`
+      )
       .then((result) => {
-        this.setState({ newData: result });
+        this.setState({ newData: result.data });
       });
   }
   handleChangeCity(e) {
@@ -389,14 +158,16 @@ class Search extends React.Component {
       return (
         <div>
           <div id="wrapper">
-            {this.state.newData.map((data) => {
+            {this.state.newData.map((data, i) => {
               return (
                 <table>
-                  <tr>
-                    <th>
-                      <FindProfile data={data} />
-                    </th>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <th>
+                        <FindProfile key={i} data={data} />
+                      </th>
+                    </tr>
+                  </tbody>
                 </table>
               );
             })}
